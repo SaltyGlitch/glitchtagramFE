@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './App.css';
 
-interface WeatherForecast {
-  date: Date;
-  temperatureC: number;
-  temperatureF: number;
-  summary?: string;
-}
+// interface WeatherForecast {
+//   date: Date;
+//   temperatureC: number;
+//   temperatureF: number;
+//   summary?: string;
+// }
 function App() {
-  const [data, setData] = useState<WeatherForecast[]>([]);
+  // const [data, setData] = useState<WeatherForecast[]>([]);
   const fetchingdata = async () => {
     const response = await fetch(
       "https://glitchtagramcli.azurewebsites.net/WeatherForecast"
