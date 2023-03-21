@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 
-interface WeatherForecast {
-  date: Date;
-  temperatureC: number;
-  temperatureF: number;
-  summary?: string;
-}
+// interface WeatherForecast {
+//   date: Date;
+//   temperatureC: number;
+//   temperatureF: number;
+//   summary?: string;
+// }
 function App() {
   // // const [data, setData] = useState<WeatherForecast[]>([]);
   // const fetchingdata = async () => {
