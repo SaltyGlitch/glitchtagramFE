@@ -6,7 +6,7 @@ const ListAllImages = () => {
   
     const fetchingImages = async () => {
       const response = await fetch(
-        "https://localhost:7244/Pictures/getimages"
+        "https://glitchtagramcli.azurewebsites.net/Pictures/getimages"
       );
       const result = await response.json();
       console.log(result);
