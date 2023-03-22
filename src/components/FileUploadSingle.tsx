@@ -45,3 +45,4 @@ const FileUploadSingle = () => {
         </div>
     );
 }
+export default FileUploadSingle;

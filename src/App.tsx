@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
+import FileUploadSingle from "./components/FileUploadSingle";
 
 // interface WeatherForecast {
 //   date: Date;
@@ -9,48 +10,48 @@ import axios from 'axios';
 //   summary?: string;
 // }
 function App() {
-  // // const [data, setData] = useState<WeatherForecast[]>([]);
-  // const fetchingdata = async () => {
-  //   const response = await fetch(
-  //     "https://glitchtagramcli.azurewebsites.net/weatherforecast"
-  //   );
-  //   const result = await response.json();
-  //   console.log(result);
-  // };
-  // fetchingdata();
+    // // const [data, setData] = useState<WeatherForecast[]>([]);
+    // const fetchingdata = async () => {
+    //   const response = await fetch(
+    //     "https://glitchtagramcli.azurewebsites.net/weatherforecast"
+    //   );
+    //   const result = await response.json();
+    //   console.log(result);
+    // };
+    // fetchingdata();
 
-  const apiCall = async () => {
-    try {
-      const URL = "https://glitchtagramcli.azurewebsites.net/weatherforecast";
-      const config = {
-        method: "GET",
-        mode: "no-cors",
-        cache: "default",
-        headers: {
-          "Access-Control-Allow-Headers": "Content-Type",
-          "Access-Control-Allow-Origin": "*",
-          Authorization: "Token  *****************",
-        },
-      };
+    const apiCall = async () => {
+        try {
+            const URL = "https://glitchtagramcli.azurewebsites.net/weatherforecast";
+            const config = {
+                method: "GET",
+                mode: "no-cors",
+                cache: "default",
+                headers: {
+                    "Access-Control-Allow-Headers": "Content-Type",
+                    "Access-Control-Allow-Origin": "*",
+                    Authorization: "Token  *****************",
+                },
+            };
 
-      const { data } = await axios.get(URL, config);
-      // setAllDataEvents(data);
-      console.log(data);
-    } catch (err) {
-      console.log(err);
-    }
-  };
+            const {data} = await axios.get(URL, config);
+            // setAllDataEvents(data);
+            console.log(data);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
-  useEffect(() => {
-    apiCall();
-  },[])
+    useEffect(() => {
+        apiCall();
+    }, [])
 
-  
-  
-  return <>
-  <p>Hello, It is me!!</p>
-  <p>Hello, It is you!!</p>
- 
-  </>;
+
+    return <>
+        <p>Hello, It is me!!</p>
+        <p>Hello, It is you!!</p>
+        <FileUploadSingle/>
+    </>;
 }
+
 export default App;
