@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import './App.css';
 import axios from 'axios';
 import FileUploadSingle from "./components/FileUploadSingle";
+import ListAllImages from './components/ListAllImages';
 
 // interface WeatherForecast {
 //   date: Date;
@@ -51,6 +52,7 @@ function App() {
         <p>Hello, It is me!!</p>
         <p>Hello, It is you!!</p>
         <FileUploadSingle/>
+        <ListAllImages/>
     </>;
 }
 
