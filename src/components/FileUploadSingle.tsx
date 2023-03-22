@@ -1,10 +1,10 @@
 import React, {useState, ChangeEvent} from "react";
 
-interface PictureProp {
-    description: string;
-    uploadedAt: Date;
-    Likes: number;
-}
+// interface PictureProp {
+//     description: string;
+//     uploadedAt: Date;
+//     Likes: number;
+// }
 
 const FileUploadSingle = () => {
     const [file, setFile] = useState<File>();
