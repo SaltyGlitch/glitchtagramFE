@@ -16,7 +16,7 @@ const FileUploadSingle = () => {
         const formData = new FormData();
         formData.append('file', file);
 
-        fetch('https://glitchtagramcli.azurewebsites.net/Pictures/uploadImage', {
+        fetch('https://glitchtagramcli.azurewebsites.net/Pictures/upload', {
             method: 'POST',
             body: formData
         })
